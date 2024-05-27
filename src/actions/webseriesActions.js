@@ -23,9 +23,9 @@ export const fetchWebseries = (searchQuery) => async (dispatch) => {
   dispatch(fetchWebseriesRequest());
   let url;
   if (searchQuery.trim() === '') {
-    url = 'http://www.omdbapi.com/?s=iron&type=series&apikey=1c3410d';
+    url = 'https://www.omdbapi.com/?s=iron&type=series&apikey=1c3410d';
   } else {
-    url = `http://www.omdbapi.com/?s=${searchQuery}&type=series&apikey=1c3410d`;
+    url = `https://www.omdbapi.com/?s=${searchQuery}&type=series&apikey=1c3410d`;
   }
   try {
     const response = await axios.get(url);

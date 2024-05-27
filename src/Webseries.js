@@ -19,9 +19,9 @@ const Webseries = () => {
         dispatch(fetchWebseriesRequest());
         let url;
         if (searchQuery.trim() === '') {
-          url = `http://www.omdbapi.com/?s=iron&type=series&apikey=1c3410d&page=${currentPage}`;
+          url = `https://www.omdbapi.com/?s=iron&type=series&apikey=1c3410d&page=${currentPage}`;
         } else {
-          url = `http://www.omdbapi.com/?s=${searchQuery}&type=series&apikey=1c3410d&page=${currentPage}`;
+          url = `https://www.omdbapi.com/?s=${searchQuery}&type=series&apikey=1c3410d&page=${currentPage}`;
         }
         const response = await axios.get(url);
         const data = response.data;

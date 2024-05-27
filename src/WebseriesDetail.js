@@ -17,7 +17,7 @@ const WebseriesDetail = () => {
   useEffect(() => {
     const fetchSeriesDetails = async () => {
       try {
-        const response = await axios.get(`http://www.omdbapi.com/?i=${id}&apikey=1c3410d`);
+        const response = await axios.get(`https://www.omdbapi.com/?i=${id}&apikey=1c3410d`);
         setSeries(response.data);
         setLoading(false);
       } catch (error) {

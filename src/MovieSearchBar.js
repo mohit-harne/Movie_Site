@@ -15,7 +15,7 @@ const MovieSearchBar = ({ onSearch, setFilteredMovies }) => {
     event.preventDefault();
     console.log('Submitting search...', query);
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=1c3410d`);
+      const response = await axios.get(`https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=1c3410d`);
       const searchData = response.data.Search || [];
       console.log('Search results:', searchData);
       onSearch(query);
